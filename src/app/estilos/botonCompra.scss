@@ -1,0 +1,30 @@
+.botonCompra{
+  background-color: var(--barra);
+  width: fit-content;
+  height: auto;
+  font-size: 20px;
+  color: var(--blanco);
+  transition: all;
+  transition-duration: 310ms;
+  border: 3px outset;
+  border-top-color:rgb(78, 78, 78) ;
+  border-right-color:var(--barra) ;
+  border-bottom-color: var(--barra) ;
+  border-left-color:rgb(78, 78, 78) ;
+
+
+
+}
+.botonCompra:hover{
+  transform: scale(1.055);
+  cursor: pointer;
+
+}
+.botonCompra:active{
+  transform: scale(0.9);
+}
+@media(max-width:900px){
+.botonCompra{
+  font-size: 15px;
+}
+}

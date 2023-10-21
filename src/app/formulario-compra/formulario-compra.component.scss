@@ -1,0 +1,67 @@
+.caja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: hidden;
+
+
+
+  background-color: var(--fondo);
+
+  .formulario {
+      margin: 20px 15px;
+      background-color: var(--blanco);
+      min-width: 200px;
+      max-width: 500px;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      border-radius: 30px;
+      gap: 1rem;
+      box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.377);
+  }
+
+  .boton {
+
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      margin-bottom: 40px;
+
+      .comprar {
+          display: flex;
+          width: fit-content;
+          height: 50px;
+          font-size: 30px;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--barra);
+          color: var(--blanco);
+          padding: 5px;
+          border: 5px outset;
+          border-top-color:rgb(78, 78, 78) ;
+          border-right-color:var(--barra) ;
+          border-bottom-color: var(--barra) ;
+          border-left-color:rgb(78, 78, 78) ;
+          transition: all;
+          transition-duration: 300ms;
+      }
+  }
+}
+.comprar:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px rgba(3, 3, 3, 0.37);
+}
+.comprar:active{
+  transform: scale(0.95);
+  box-shadow: none;
+}

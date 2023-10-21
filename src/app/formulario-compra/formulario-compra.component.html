@@ -1,0 +1,57 @@
+<div class="caja">
+  <div class="formulario">
+      <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input type="text" matInput required="Nombre" [(ngModel)]="model.Nombre" Nombre="Nombre" #Nombre="ngModel">
+          <mat-error [hidden]="Nombre.pristine || Nombre.invalid">requiere un nombre</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Apellido</mat-label>
+          <input type="text" matInput required="Apellido" [(ngModel)]="model.Apellido" Apellido="Apellido" #Apellido="ngModel">
+          <mat-error  [hidden]="Apellido.pristine || Apellido.invalid">requiere un apellido</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>DNI</mat-label>
+          <input type="number" matInput required="DNI" maxlength="8" [(ngModel)]="model.DNI" DNI="DNI" #DNI="ngModel">
+          <mat-error  [hidden]="DNI.pristine || DNI.invalid">requiere un dni</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Domicilio</mat-label>
+          <input type="text" matInput required="Domicilio" [(ngModel)]="model.Domicilio" Domicilio="Domicilio"
+              #Domicilio="ngModel">
+          <mat-error  [hidden]="Domicilio.pristine || Domicilio.invalid">requiere un domicilio</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="ejemplo@example.com" [formControl]="email" required>
+          <mat-error  [hidden]="email.pristine || email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Numero de Tarjeta</mat-label>
+          <input type="number" matInput #input maxlength="16" required="Numero" [(ngModel)]="model.NumerodeTarjeta"
+              NumerodeTarjeta="NumerodeTarjeta" #NumerodeTarjeta="ngModel">
+          <mat-error  [hidden]="NumerodeTarjeta.pristine || NumerodeTarjeta.invalid">requiere un numero de tarjeta</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-label>Codigo de Seguridad</mat-label>
+          <input type="password" matInput #input maxlength="3" required="Seguridad" [(ngModel)]="model.CodigoDeSeguridad"
+              CodigoDeSeguridad="CodigoDeSeguridad" #CodigoDeSeguridad="ngModel">
+          <mat-error  [hidden]="CodigoDeSeguridad.pristine || CodigoDeSeguridad.invalid">requiere un codigo de seguridad</mat-error>
+      </mat-form-field>
+  </div>
+  <app-detalle-compra></app-detalle-compra>
+  <div class="boton">
+      <button [disabled]="
+          Nombre.invalid || Apellido.invalid ||
+          Domicilio.invalid || DNI.invalid ||
+          email.invalid || NumerodeTarjeta.invalid ||
+          CodigoDeSeguridad.invalid"
+          (click)="comprar()"
+          class="comprar">
+          Comprar
+          </button>
+  </div>
+
+</div>
+

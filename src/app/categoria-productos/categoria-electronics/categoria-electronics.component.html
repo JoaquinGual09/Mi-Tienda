@@ -1,0 +1,9 @@
+<div class="conteiner">
+  <section class="seccion">
+      <app-producto
+      (clickComprar)="comprarProducto($event)"
+      [producto]="producto"
+      *ngFor="let producto of data">
+      </app-producto>
+  </section>
+  </div>

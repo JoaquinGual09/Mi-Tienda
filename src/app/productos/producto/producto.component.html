@@ -1,0 +1,22 @@
+<div class="caja">
+  <mat-card class="card">
+      <div class="imagen">
+        <img [src]="producto.image" alt="Imagen de Producto">
+      </div>
+      <mat-card-header class="producto serif">{{producto.title}}</mat-card-header>
+     <div class="div-descripcion">
+      <mat-expansion-panel hideToggle class="descripcion serif">
+        <mat-expansion-panel-header>
+            <mat-panel-title class="descripcion-titulo serif">
+                Descripcion
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <hr>
+        <p class="descripcion-texto serif"><br> {{producto.description}} </p>
+    </mat-expansion-panel>
+     </div>
+
+      <mat-card-content class="precio serif">{{producto.price | currency}}</mat-card-content>
+      <button class="boton" (click)="onClick()">Agregar Al Carro</button>
+  </mat-card>
+</div>
