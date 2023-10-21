@@ -1,0 +1,55 @@
+.header {
+  background-color: var(--barra);
+  width: 100%;
+  display: flex;
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  .barra {
+    background-color: var(--barra);
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 3rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--barra);
+  padding: 15px;
+  gap: 1rem;
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.5);
+
+  .links a {
+    text-decoration: none;
+    color: var(--blanco);
+  }
+
+  .links ul {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .copyright{
+    display: flex;
+  }
+
+  .copyright p {
+    padding: 0.25rem 0;
+    color: var(--blanco);
+  }
+
+  .brand-copy {
+    font-weight: bold;
+    color: var(--blanco);
+  }
+}
