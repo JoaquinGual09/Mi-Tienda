@@ -4,11 +4,11 @@
       <li>
         <a><mat-icon class="icon">menu</mat-icon></a>
         <ul class="menu-vertical">
-          <li><a routerLink="/Inicio">Inicio</a></li>
+          <li><a routerLink="Inicio">Inicio</a></li>
           <li>
             <a>Categorias</a>
             <ul class="menu-vertical">
-              <li><a routerLink="/PRODUCTOS">Todos los Productos</a></li>
+              <li><a routerLink="PRODUCTOS">Todos los Productos</a></li>
               <li *ngFor="let Categorias of data">
                 <a [routerLink]="['/Categorias',Categorias]">{{Categorias}}</a>
               </li>
@@ -21,11 +21,11 @@
   </div>
 <div class="menu-barra">
   <ul class="menu-horizontal">
-    <li><a routerLink="/Inicio">Inicio</a></li>
+    <li><a routerLink="Inicio">Inicio</a></li>
     <li>
       <a>Categorias</a>
       <ul class="menu-vertical">
-        <li><a routerLink="/PRODUCTOS">Todos los Productos</a></li>
+        <li><a routerLink="PRODUCTOS">Todos los Productos</a></li>
         <li *ngFor="let Categorias of data">
           <a [routerLink]="['/Categorias',Categorias]">{{Categorias}}</a>
         </li>
