@@ -62,6 +62,7 @@ export class comprasservice {
       this.carroSubject.next([]);
       this.totalSubject.next(0);
       this.cantidadSubject.next(0);
+      this.productos = [];
     }
 
 }
